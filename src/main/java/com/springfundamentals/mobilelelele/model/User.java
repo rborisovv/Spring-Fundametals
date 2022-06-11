@@ -1,9 +1,11 @@
 package com.springfundamentals.mobilelelele.model;
 
-import com.springfundamentals.mobilelelele.enumeration.Role;
 import lombok.*;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "users")
@@ -12,8 +14,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @ToString
-public class User extends BaseEntity{
-    @Column
+public class User extends BaseEntity {
+    @Column(unique = true)
     @NonNull
     private String username;
 
