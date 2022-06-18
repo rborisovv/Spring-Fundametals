@@ -15,7 +15,7 @@ import javax.persistence.*;
 public class Model extends BaseEntity {
     @Column
     @NonNull
-    private String model;
+    private String name;
 
     @Enumerated(EnumType.STRING)
     @NonNull

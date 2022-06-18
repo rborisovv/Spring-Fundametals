@@ -1,6 +1,7 @@
 package com.springfundamentals.mobilelelele.bindingModel;
 
 
+import com.springfundamentals.mobilelelele.config.validation.UsernameAvailable;
 import lombok.*;
 
 import javax.validation.constraints.NotBlank;
@@ -21,11 +22,11 @@ public class UserRegisterDto {
     @Size(min = 2, max = 30)
     private String lastName;
 
-    @NotBlank
-    @Size(min = 2, max = 30)
+    @NotBlank(message = "Username is required!")
+    @Size(min = 2, max = 30, message = "Username must be between 2 and 30 characters!")
+    @UsernameAvailable
     private String username;
 
     @NotBlank
-    @Size(min = 6)
     private String password;
 }

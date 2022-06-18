@@ -8,6 +8,8 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 @MappedSuperclass
+@Getter
+@Setter
 public class BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

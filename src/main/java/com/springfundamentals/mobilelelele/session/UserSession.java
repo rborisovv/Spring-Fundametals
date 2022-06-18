@@ -8,6 +8,8 @@ import lombok.*;
 @Setter
 @ToString
 public class UserSession {
+    private Long id;
+
     private boolean isLoggedIn;
 
     private String username;

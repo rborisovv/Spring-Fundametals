@@ -26,6 +26,10 @@ public class Offer extends BaseEntity {
 
     @Column
     @NonNull
+    private Integer mileage;
+
+    @Column
+    @NonNull
     private BigDecimal price;
 
     @Enumerated(EnumType.STRING)
